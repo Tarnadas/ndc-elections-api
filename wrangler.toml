@@ -1,0 +1,20 @@
+name = "ndc-elections-api"
+main = "dist/index.mjs"
+usage_model = 'bundled'
+workers_dev = true
+compatibility_date = "2023-09-10"
+
+[build]
+command = "yarn install && yarn build"
+
+[vars]
+# The necessary secrets are:
+# - PIKESPEAK_API_KEY
+# Run `echo <VALUE> | wrangler secret put <NAME>` for each of these
+
+[durable_objects]
+bindings = [{ name = "CANDIDATES", class_name = "Candidates" }]
+
+[[migrations]]
+tag = "v1"
+new_classes = ["Candidates"]

@@ -1,0 +1,31 @@
+{
+  "name": "ndc-elections-api",
+  "version": "1.0.0",
+  "repository": "git@github.com:Tarnadas/ndc-elections-api.git",
+  "author": "Mario Reder <mario.reder@pm.me>",
+  "license": "MIT",
+  "scripts": {
+    "start": "wrangler dev --env dev --local",
+    "deploy": "wrangler publish",
+    "build": "cross-env NODE_ENV=production node build.mjs",
+    "build:dev": "node build.mjs",
+    "lint": "eslint --max-warnings=0 src && prettier --check '*.{json,js}' 'src/**/*.{js,ts}'",
+    "format": "prettier --write 'src/**/*.{js,ts}'"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230904.0",
+    "@typescript-eslint/eslint-plugin": "^6.6.0",
+    "@typescript-eslint/parser": "^6.6.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-typescript": "^3",
+    "eslint-import-resolver-typescript": "^3.6.0",
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.3",
+    "typescript": "5.2.2",
+    "wrangler": "^3.7.0"
+  }
+}
