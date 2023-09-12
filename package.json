@@ -6,15 +6,22 @@
   "license": "MIT",
   "scripts": {
     "start": "wrangler dev --env dev --local",
-    "deploy": "wrangler publish",
+    "deploy": "wrangler deploy",
     "build": "cross-env NODE_ENV=production node build.mjs",
     "build:dev": "node build.mjs",
     "lint": "eslint --max-warnings=0 src && prettier --check '*.{json,js}' 'src/**/*.{js,ts}'",
     "format": "prettier --write 'src/**/*.{js,ts}'"
   },
-  "dependencies": {},
+  "dependencies": {
+    "fetch-retry": "^5.0.6",
+    "hono": "^3.6.0",
+    "pako": "^2.1.0",
+    "ts-pattern": "^5.0.5",
+    "zod": "^3.22.2"
+  },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20230904.0",
+    "@types/pako": "^2.0.0",
     "@typescript-eslint/eslint-plugin": "^6.6.0",
     "@typescript-eslint/parser": "^6.6.0",
     "cross-env": "^7.0.3",

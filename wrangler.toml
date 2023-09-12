@@ -15,6 +15,65 @@ command = "yarn install && yarn build"
 [durable_objects]
 bindings = [{ name = "CANDIDATES", class_name = "Candidates" }]
 
+[triggers]
+crons = ["*/2 * * * *"]
+
 [[migrations]]
 tag = "v1"
+new_classes = ["Candidates"]
+
+[[migrations]]
+tag = "v2"
+deleted_classes = ["Candidates"]
+
+[[migrations]]
+tag = "v3"
+new_classes = ["Candidates"]
+
+[[migrations]]
+tag = "v4"
+deleted_classes = ["Candidates"]
+
+[[migrations]]
+tag = "v5"
+new_classes = ["Candidates"]
+
+[[migrations]]
+tag = "v6"
+deleted_classes = ["Candidates"]
+
+[[migrations]]
+tag = "v7"
+new_classes = ["Candidates"]
+
+[[migrations]]
+tag = "v8"
+deleted_classes = ["Candidates"]
+
+[[migrations]]
+tag = "v9"
+new_classes = ["Candidates"]
+
+[[migrations]]
+tag = "v10"
+deleted_classes = ["Candidates"]
+
+[[migrations]]
+tag = "v11"
+new_classes = ["Candidates"]
+
+[[migrations]]
+tag = "v12"
+deleted_classes = ["Candidates"]
+
+[[migrations]]
+tag = "v13"
+new_classes = ["Candidates"]
+
+[[migrations]]
+tag = "v14"
+deleted_classes = ["Candidates"]
+
+[[migrations]]
+tag = "v15"
 new_classes = ["Candidates"]
